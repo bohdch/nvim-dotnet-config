@@ -16,12 +16,14 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+require("config.options")
+require("config.keymap")
+require("config.autocmds")
+
 require("lazy").setup({
     spec = {
         { import = "plugins" },
     },
 })
 
--- Load configuration files
 require("colors.colors")
-require("config.options")
